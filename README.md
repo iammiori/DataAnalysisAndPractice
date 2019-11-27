@@ -1,6 +1,6 @@
 # DataAnalysisAndPractice
-
-## Yelp recommend system
+> This project is a Sejong Univ. 19-Fall Data Analysis And Practice class final project.
+## Recommender system using yelp
 
 ### Overview
 
