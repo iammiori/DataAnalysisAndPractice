@@ -1,5 +1,5 @@
 # DataAnalysisAndPractice
-> This project is a Sejong Univ. 19-Fall Data Analysis And Practice class final project.
+> This project is  **Sejong Univ. 19-Fall Data Analysis And Practice class final project**.
 ## Recommender system using yelp
 
 ### Overview
