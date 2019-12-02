@@ -11,7 +11,9 @@
   - business.json ( You can get it by downloading yelp )
   - review.json ( You can get it by downloading yelp )
   - user.csv ( You can get it by running the code )
-
+  - review.csv ( You can get it by running the code )
+  - business_clean.csv ( You can get it by running the code )  
+  **- rating_final.csv ( You can get it by running the code )** **=> We'll use this data**  
 
 ### Library Dependencies
 - Python 3.7.3
