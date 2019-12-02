@@ -5,7 +5,7 @@
 ### Overview
 
 - data : yelp (round 13) <br>
-**data size is too big to load, so you should download the yelp data**
+**data size is too big to load, so you should download the yelp data [here](https://www.yelp.com/dataset)**
 
 
 
