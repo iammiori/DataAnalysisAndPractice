@@ -28,3 +28,8 @@
 **1. preprocessing**
 - calldataset > call_dataset.py
   - def json_2_csv : `invert json file to csv file`
+  
+  
+  
+  ### To Run
+  - run `basic_test.py`  
