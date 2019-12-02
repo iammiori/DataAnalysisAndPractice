@@ -19,4 +19,4 @@
 ### Procedure
 1. install all the dependencies
 2. unzip .tar (you can get json file)
-<br> how to ) cmd : 'tar xvf <i>your_path</i>.tar'
+<br> how to ) cmd : `tar xvf your_path.tar`
