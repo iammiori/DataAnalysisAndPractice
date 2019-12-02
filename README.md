@@ -20,3 +20,10 @@
 1. install all the dependencies
 2. unzip .tar (you can get json file)
 <br> how to ) cmd : `tar xvf your_path.tar`
+
+
+
+### Component
+**1. preprocessing**
+- calldataset > call_dataset.py
+  - def json_2_csv : `invert json file to csv file`
