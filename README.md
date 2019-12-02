@@ -31,5 +31,5 @@
   
   
   
-  ### To Run
-  - run `basic_test.py`  
+### To Run
+- run `basic_test.py`  
