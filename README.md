@@ -15,9 +15,8 @@
   - business_clean.csv ( You can get it by running the code )  
   **- rating_final.csv ( You can get it by running the code )** **=> We'll use this data**  
   <br>
-  > similarity, memory-based CF, surprise 를 위해 가공된 데이터는 제공했다
-  <br>
-  > 따라서 코드를 돌릴 때 json을 csv로 바꾸는 코드는 주석처리가 필요하다
+> similarity, memory-based CF, surprise 를 위해 가공된 데이터는 제공했다 (rating_final.csv , real_matrix.npy ) <br>
+  따라서 코드를 돌릴 때 json을 csv로 바꾸는 코드는 주석처리가 필요하다
 
 ### Library Dependencies
 - Python 3.7.3
