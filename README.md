@@ -37,11 +37,11 @@
 **1. preprocessing**
 - calldataset > call_dataset.py
   - def json_2_csv : `invert json file to csv file`
-  - def review : `많이 사용한 user를 기반으로 review data 불러오기`
-  - def stroe : `가게명을 바꾸기 위한 가게 목록을 불러오고 중복 제거`
-  - def rating : `최종 review 파일`
-  - def change_column : `column 바꿔줌`
-  - def save_npy : `matrix로 생성후 저장`
+  - def review : `load review data based on the user with the most acitve`
+  - def stroe : `To map the store ID and name, we load the store list from business.json and removed the duplicates `
+  - def rating : `final review file`
+  - def change_column : `change column`
+  - def save_npy : `make matrix and save it using numpy
   
   
   
