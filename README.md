@@ -41,7 +41,7 @@
   - def stroe : `To map the store ID and name, we load the store list from business.json and removed the duplicates `
   - def rating : `final review file`
   - def change_column : `change column`
-  - def save_npy : `make matrix and save it using numpy
+  - def save_npy : `make matrix and save it using numpy`
   
   
   
