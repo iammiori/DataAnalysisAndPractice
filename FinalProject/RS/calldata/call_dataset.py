@@ -1,6 +1,7 @@
 import json,csv
 import os
 import pandas as pd
+import numpy as np
 
 class JsonCsvConverter(object):
     
@@ -215,7 +216,16 @@ class JsonCsvConverter(object):
     def change_column(self,file):
         review_df = pd.read_csv(file)
         review_df = review_df.rename(columns={'user_id':'user','business_id':'store'})
-        review_df.to_csv(file,index=False)              
+        review_df.to_csv(file,index=False)    
+        
+    
+    def save_npy(self,final_data,matrix_data):
+        review_final = pd.read_csv(final_data)
+        print("----making pivot table----")
+        ui_matrix = review_final.reset_index().pivot_table(index='user',columns='store',values='stars')
+        print("ui_matirx shape : {}".format(ui_matrix.shape))
+        matrix = ui_matrix
+        np.save(matrix_data,matrix)
                     
 '''       
 if __name__ == '__main__':

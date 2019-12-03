@@ -20,3 +20,6 @@ converter.rating("./dataset/review.json", "./dataset/rating_final.csv","./datase
 
 # column 변경
 converter.change_column("./dataset/rating_final.csv")                    
+
+# ui matrix matrix로
+converter.save_npy("./dataset/rating_final.csv","./dataset/real_matrix")
