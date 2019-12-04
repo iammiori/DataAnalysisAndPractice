@@ -1,8 +1,9 @@
 # DataAnalysisAndPractice
 > This project is  **Sejong Univ. 19-Fall Data Analysis And Practice class final project**.
+<br>
+> team member : Sohyun Kwon, Miyeon Lee
 ## Recommender system using yelp
 
-> team member : Sohyun Kwon, Miyeon Lee
 
 ### Overview
 
