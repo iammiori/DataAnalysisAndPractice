@@ -28,6 +28,12 @@
 
 
 
+### Directory
+![image](https://user-images.githubusercontent.com/46439995/70148254-27d9d600-16e9-11ea-9537-c9e830647702.png)
+
+
+
+
 ### Procedure
 1. install all the dependencies
 2. unzip .tar (you can get json file)
