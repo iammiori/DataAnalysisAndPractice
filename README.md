@@ -2,6 +2,8 @@
 > This project is  **Sejong Univ. 19-Fall Data Analysis And Practice class final project**.
 ## Recommender system using yelp
 
+> team member : Sohyun Kwon, Miyeon Lee
+
 ### Overview
 
 - data : yelp (round 13) <br>
