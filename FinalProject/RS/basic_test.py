@@ -1,4 +1,5 @@
 from calldata import call_dataset
+from similarity import cal_similarity
 import numpy as np
 import pandas as pd
 
@@ -23,3 +24,13 @@ converter.change_column("./dataset/rating_final.csv")
 
 # ui matrix matrix로
 converter.save_npy("./dataset/rating_final.csv","./dataset/real_matrix")
+
+# calculate similarity
+# 1. cos
+calsim = cal_similarity.CalculSim()
+
+calsim.cos("./dataset/real_matrix.npy")
+
+calsim.PCC("./dataset/real_matrix.npy")
+
+calsim.Jac("./dataset/real_matrix.npy")
