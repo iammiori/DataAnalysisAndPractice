@@ -50,6 +50,12 @@
   - def rating : `final review file`
   - def change_column : `change column`
   - def save_npy : `make matrix and save it using numpy`
+  <br>
+**2. similarity**
+- similarity > cal_similarity.py
+  - def cos : `Cosine similarity`
+  - def PCC : `Pearson Correlation Coefficient similarity`
+  - def Jac : `Jaccard measure similarity`
   
   
   
