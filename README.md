@@ -61,6 +61,28 @@
   - def cos : `Cosine similarity`
   - def PCC : `Pearson Correlation Coefficient similarity`
   - def Jac : `Jaccard measure similarity`
+<br>
+
+**3. memor based cf**
+
+<br>
+
+**4. surprise**
+- you can get result with csv file.
+- Input the files and algorithms to be stored as parameters.
+- ex)<br>
+![image](https://user-images.githubusercontent.com/46439995/70629768-d8a61f00-1c6d-11ea-8ea3-a0a28557125d.png)
+
+
+1. compare algorithm <br><br>
+![image](https://user-images.githubusercontent.com/46439995/70629672-b2807f00-1c6d-11ea-86c1-127b7bdd91c4.png)
+
+2. SVD result <br><br>
+![image](https://user-images.githubusercontent.com/46439995/70629737-c926d600-1c6d-11ea-89bd-6f40a72efc6c.png)
+<br>
+
+  
+  
   
   
   
