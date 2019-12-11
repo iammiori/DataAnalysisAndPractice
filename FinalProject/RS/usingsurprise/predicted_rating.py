@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import math
 from surprise import SVD
 from surprise import Dataset
 from surprise import Reader
@@ -302,8 +303,78 @@ class cal_surprise(object):
                 F1 = 2*P*R/(P+R)
 
                 print("algo : {}\n precision : {} recall: {} F1 : {}".format(algoname,P,R,F1))
-            print("\n\n")    
+            print("\n\n") 
             
-    def NDCG(self,rating_file):
-        est_matrix= np.load(rating_file)
-        print(est_matrix.shape)
+    def save_npy(self,predict_csv_file,algorithm,save_path):
+        rating_file = pd.read_csv(predict_csv_file)
+        predict_csv = rating_file[["user","item","est"]]
+        predict_matrix = predict_csv.reset_index().pivot_table(index="user",columns="item",values="est")
+        est_matrix = predict_matrix        
+        hwak = '.npy'
+        if (algorithm == 'SVD'):
+            np.save(save_path+algorithm+hwak,est_matrix)
+        elif (algorithm == "KNNBasic"):
+            np.save(save_path+algorithm+hwak,est_matrix)           
+        elif (algorithm == "KNNWithZScore"):
+            np.save(save_path+algorithm+hwak,est_matrix)       
+        elif (algorithm == "KNNWithMeans"):
+            np.save(save_path+algorithm+hwak,est_matrix)   
+        elif (algorithm == "PMF"):
+            np.save(save_path+algorithm+hwak,est_matrix)  
+        elif (algorithm == "PMFwithbiased"):
+            np.save(save_path+algorithm+hwak,est_matrix)
+            
+
+            
+            
+    def NDCG(self,ui_mat_file,est_matrix_file,k):
+        ui_matrix = np.load(ui_mat_file)
+        est_matrix = np.load(est_matrix_file)
+        null=[]
+        #If number of not-null in each user is greater than k, the calculation will be failed
+        #thus those row should be removed from calculation
+        for i in range(len(ui_matrix)):
+            a=np.count_nonzero(~np.isnan(ui_matrix[i]))
+            if a<k:
+                null.append(i)
+        ui_matrix=np.delete(ui_matrix, [null], 0)
+        est_matrix=np.delete(est_matrix, [null], 0)
+
+
+        #NDCG calculation
+        dcg_sum=0
+        idcg_sum=0
+        for i in range(len(ui_matrix)):
+            #Exclues all the null value from crresponding user(row) of both matrix
+            rui=ui_matrix[i]
+            rui_bar=est_matrix[i]
+            rui=rui[~np.isnan(rui)]
+            rui_bar=rui_bar[~np.isnan(rui_bar)]
+
+            #Ranking list of estimated rating(rui_bar)
+            temp = rui_bar.argsort()[::-1]
+            est_rank = np.empty_like(temp)
+            est_rank[temp] = np.arange(len(est_rank))
+            est_rank=list(est_rank)
+
+            #DCG value of each user (Summed up in one value, dcg_sum)
+            dcg_sum+=rui[est_rank.index(0)]
+            for j in range(1, k):
+                dcg_sum+=(rui[est_rank.index(j)]/math.log2(j+1))
+
+            #Ranking list of original rating(rui)
+            temp = rui.argsort()[::-1]
+            ori_rank = np.empty_like(temp)
+            ori_rank[temp] = np.arange(len(ori_rank))
+            ori_rank=list(ori_rank)
+
+            #IDCG value of each user (Summed up in one value, idcg_sum)
+            idcg_sum+=rui[ori_rank.index(0)]
+            for j in range(1, k):
+                idcg_sum+=(rui[ori_rank.index(j)]/math.log2(j+1))
+
+        dcg=dcg_sum/np.abs(len(ui_matrix))
+        idcg=idcg_sum/np.abs(len(ui_matrix))
+        print("DCG : %f"%(dcg))
+        print("IDCG : %f"%(idcg))
+        print("NDCG : %f"%(dcg/idcg))        
