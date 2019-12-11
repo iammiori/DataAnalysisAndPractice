@@ -81,6 +81,11 @@
 ![image](https://user-images.githubusercontent.com/46439995/70629737-c926d600-1c6d-11ea-89bd-6f40a72efc6c.png)
 <br>
 
+3. NDCG
+- 예측 rating 값을 뽑아내는 함수 출력이 길기 때문에 이를 csv,npy로 저장하는 코드를 포함
+- 이를 불러와, 따로 측정한 결과
+![image](https://user-images.githubusercontent.com/46439995/70643950-50cc0f00-1c85-11ea-8b7c-2dc71d9e98f3.png)
+
   
   
   
