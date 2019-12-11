@@ -1,5 +1,7 @@
 from calldata import call_dataset
 from similarity import cal_similarity
+from memorybasedcf import baseline
+from usingsurprise import predicted_rating
 import numpy as np
 import pandas as pd
 
@@ -34,3 +36,15 @@ calsim.cos("./dataset/real_matrix.npy")
 calsim.PCC("./dataset/real_matrix.npy")
 
 calsim.Jac("./dataset/real_matrix.npy")
+
+base = baseline.CalBase()
+
+#basic CF
+base.basic_CF("./dataset/real_matrix.npy","PCC",3)
+
+# baseline 
+base.baseline("./dataset/real_matrix.npy","PCC",4)
+
+surprise = predicted_rating.cal_surprise()
+surprise.load("./dataset/review_top.csv","./dataset/algo_vs.csv","SVD","./dataset/knnbasic_result.csv")    
+surprise.evaluation("./dataset/review_top.csv")
