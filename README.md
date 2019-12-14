@@ -34,7 +34,7 @@
 
 
 ### Directory
-![image](https://user-images.githubusercontent.com/46439995/70148254-27d9d600-16e9-11ea-9537-c9e830647702.png)
+![image](https://user-images.githubusercontent.com/46439995/70844467-c8b45800-1e84-11ea-879b-38ead74872f1.png)
 
 
 
