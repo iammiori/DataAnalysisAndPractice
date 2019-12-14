@@ -30,6 +30,8 @@
 - pandas, numpy
 - json,csv
 - surprise
+- math
+- collections
 
 
 
@@ -43,6 +45,7 @@
 1. install all the dependencies
 2. unzip .tar (you can get json file)
 <br> how to ) cmd : `tar xvf your_path.tar`
+3. run basic_test.py
 
 
 
