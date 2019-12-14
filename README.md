@@ -4,6 +4,14 @@
 > team member : Sohyeon Kwon, Miyeon Lee
 
 
+## PIP Similarity 
+> If you want to look code, please clik the link <br>
+[code report - PIP](https://iammiori.github.io/DataAnalysisAndPractice/FinalProject/PIP/yelp_PIP.html)
+
+## Singularities
+> If you want to look code, please clik the link <br>
+[code report - Singularities](https://iammiori.github.io/DataAnalysisAndPractice/FinalProject/Singularity/FinalTerm_Singularities.html)
+
 ## Recommender system using yelp
 
 
