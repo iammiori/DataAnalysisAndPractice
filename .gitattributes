@@ -1,5 +1,2 @@
-web/dist/* linguist-vendored
-* linguist-vendored
 *.py linguist-vendored=false
-web/template/* linguist-vendored
-web/vendor/* linguist-vendored
+
