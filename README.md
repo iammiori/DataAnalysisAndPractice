@@ -67,7 +67,7 @@
 
 <br>
 
-**4. surprise**
+**4. usingsurprise**
 - you can get result with csv file.
 - Input the files and algorithms to be stored as parameters.
 - ex)<br>
