@@ -1,3 +1,4 @@
 web/dist/* linguist-vendored
+*.py linguist-vendored=false
 web/template/* linguist-vendored
 web/vendor/* linguist-vendored
